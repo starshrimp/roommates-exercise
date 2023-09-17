@@ -30,6 +30,22 @@ footer {
 .profile-picture {
   float: left;
   margin-right: 30px;
+  height: 500px;
+  width: auto;
+  max-width: 100%; /* Ensures the div doesn't exceed its parent's width */
+  max-height: 100%; /* Ensures the div doesn't exceed its parent's height */
+  overflow: hidden;
+}
+
+.profile-image {
+  border-radius: 30px;
+  margin: 50px;
+  height: 80%;
+  width: auto;
+}
+
+.steckbrief {
+  margin: 50px;
 }
 
 .house-text {

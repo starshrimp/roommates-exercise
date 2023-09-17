@@ -5,7 +5,6 @@ class ProfileRepository
 
   def self.all_profiles
     CSV.table('profiles.csv').map do |row|
-      friends = row[:friends].split(',').map(&:strip)
       Profile.new(
         row[:nickname],
         row[:name],
@@ -22,5 +21,12 @@ class ProfileRepository
       profile.nickname == nickname
     end
   end
+
+  # def self.add_friend(nickname, friend)
+
+  #   profile = find_profile(nickname)
+  #   profile.friends << friend
+  # end
+
 
 end

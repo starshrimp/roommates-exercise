@@ -1,0 +1,30 @@
+/* <table class="steckbrief">
+  <tbody>
+    <tr>
+      <td>Name:</td>
+      <td><%= @profile.name %></td>
+    </tr>
+
+    <tr>
+      <td>Brith date:</td>
+      <td><%= @profile.date_of_birth %></td>
+    </tr>
+
+    <tr>
+      <td>Hobbies:</td>
+      <td><%= @profile.hobbies %></td>
+    </tr>
+
+    <tr>
+      <td>Friends:</td>
+      <td>
+        <ul>
+          <p><% @profile.friends_objects.each do |friend| %>
+            <li><a href="/profiles/<%= friend.nickname %>"><%= friend.name %></a></li>
+          <% end %>
+          </p>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table> */

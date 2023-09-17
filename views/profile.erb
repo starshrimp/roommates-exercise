@@ -1,34 +1,21 @@
 <div class="profile-picture">
-  <img src="/images/<%= @profile.image_file %>" />
+  <img src="/images/<%= @profile.image_file %>" class="profile-image"/>
 </div>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Name:</td>
-      <td><%= @profile.name %></td>
-    </tr>
-
-    <tr>
-      <td>Brith date:</td>
-      <td><%= @profile.date_of_birth %></td>
-    </tr>
-
-    <tr>
-      <td>Hobbies:</td>
-      <td><%= @profile.hobbies %></td>
-    </tr>
-
-    <tr>
-      <td>Friends:</td>
-      <td>
-        <ul>
-          <% @profile.friends.each do |friend_nickname| %>
-            <!-- TODO Don't just show the nick names here, also link to their profiles. -->
-            <li><%= friend_nickname %></li>
-          <% end %>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="container mt-5 steckbrief">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title"><%= @profile.name %></h3>
+            <p class="card-text">Birth Date: <%= @profile.date_of_birth %></p>
+            <p class="card-text">Hobbies: <%= @profile.hobbies %></p>
+            <p class="card-text">Friends: <br>
+             <% if @profile.friends_objects != [] %> 
+              <% @profile.friends_objects.each do |friend| %>
+                <br> <a href="/profiles/<%= friend.nickname %>"><%= friend.name %></a>
+              <% end %></p>
+            <% else %>
+              <p> No friends yet </p>
+            <% end %>
+        </div>
+    </div>
+</div>

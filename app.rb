@@ -16,6 +16,11 @@ end
 
 get '/profiles/:name' do
   @profile = ProfileRepository.find_profile(params[:name])
+  p @profile
+  # p ProfileRepository.all_profiles
+  if @profile.friends_objects == []
+    @profile.add_friend
+  end
   if @profile
     erb :profile
   else
