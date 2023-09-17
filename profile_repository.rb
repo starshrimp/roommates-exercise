@@ -5,6 +5,7 @@ class ProfileRepository
 
   def self.all_profiles
     CSV.table('profiles.csv').map do |row|
+      friends = row[:friends].split(',').map(&:strip)
       Profile.new(
         row[:nickname],
         row[:name],
