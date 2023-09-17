@@ -4,6 +4,7 @@ body {
 
 header {
   border-bottom: 1px gray solid;
+  padding: 30px 20px 20px 50px;
 }
 
 nav {
@@ -29,4 +30,21 @@ footer {
 .profile-picture {
   float: left;
   margin-right: 30px;
+}
+
+.house-text {
+  
+}
+
+.img-house {
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+
+}
+.specifications {
+  padding: 50px 30px 50px 30px;
+  background-color: #ADD8E6;
+  border-radius: 20px;
+  margin-top: 30px;
 }
