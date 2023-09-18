@@ -10,7 +10,7 @@ class Profile
     @friends_objects =[]
   end
 
-  def add_friend
+  def add_friends
     if @friends!= nil
       friends_array = @friends.split(',')
       p "Here comes friends:"

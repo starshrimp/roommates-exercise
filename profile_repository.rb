@@ -29,4 +29,6 @@ class ProfileRepository
   # end
 
 
+  #ask which makes more sense: add_friend in profile or in profile_repository?
+
 end
